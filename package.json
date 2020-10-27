@@ -1,0 +1,22 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "author": "Vani Singh",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11",
+    "shortid": "^2.2.16",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
