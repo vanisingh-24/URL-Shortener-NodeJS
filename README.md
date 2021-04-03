@@ -8,7 +8,6 @@
 - Mongodb
 - EJS
 - Git
-<br>
 
 ## Quick Start
 
