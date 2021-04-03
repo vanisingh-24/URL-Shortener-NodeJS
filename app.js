@@ -1,23 +1,19 @@
 const express = require('express');
-//const connectDB = require('./config/db');
 const mongoose = require('mongoose');
 const ShortUrl = require('./models/shortUrl');
 
-//connectDB();
-
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/urlShortener', {
+mongoose.connect('mongodb://localhost/urlShortener', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
-//const connectDB = require('./config/db');
-
 app.set('view engine', 'ejs');
+
 app.use(express.urlencoded({extended: false}));
 
-app.get('/', async (req,res) => {
+app.get('/', async(req,res) => {
    const shortUrls = await ShortUrl.find();
    res.render('index', {shortUrls: shortUrls});
 });
@@ -27,16 +23,8 @@ app.post('/shortUrls', async (req,res) => {
    res.redirect('/');
 });
 
-//Connect to databse
-//connectDB();
-
-//Define routes
-//app.use('/', require('./routes/index'));
-//app.use('/api/url', require('./routes/url'));
-
-// const PORT = 5000;
 app.get('/:shortUrl',async (req,res) => {
-   const shortUrl = await ShortUrl.findOne({short: req.param.shortUrl });
+   const shortUrl = await ShortUrl.findOne({short: req.params.shortUrl });
    if(shortUrl == null) return res.sendStatus(404);
 
    shortUrl.clicks++;
