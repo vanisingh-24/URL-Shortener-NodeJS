@@ -1,6 +1,0 @@
-POST http://localhost:5000/api/url/shorten
-Content-Type: application/json
-
-{
-    "longUrl": "https://www.amazon.in/Apple-iPhone-11-64GB-Product/dp/B07XVKG5XV/ref=gbph_img_m-2_b9c3_bd9b4ba7?smid=A14CZOWI0VEHLG&pf_rd_p=4fae2dcf-79a1-4c3f-8844-145e9031b9c3&pf_rd_s=merchandised-search-2&pf_rd_t=101&pf_rd_i=3419926031&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_r=KS1B1A92420FR25SV165"
-}
